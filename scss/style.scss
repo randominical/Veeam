@@ -12,7 +12,49 @@
     font-style: normal;
     font-display: block;
 }
-  
+
+ @font-face {
+	font-family: 'Tahoma';
+	src: url('Tahoma.eot');
+	src: local('Tahoma'),
+		url('../fonts/Tahoma/Tahoma.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Tahoma/Tahoma.woff') format('woff'),
+        url('../fonts/Tahoma/Tahoma.woff2') format('woff2'),
+		url('../fonts/Tahoma/Tahoma.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Tahoma';
+	src: url('../fonts/Tahoma/Tahoma-Bold.eot');
+	src: local('../fonts/Tahoma/Tahoma Bold'), local('Tahoma-Bold'),
+		url('../fonts/Tahoma/Tahoma-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/Tahoma/Tahoma-Bold.woff') format('woff'),
+        url('../fonts/Tahoma/Tahoma-Bold.woff2') format('woff2'),
+		url('../fonts/Tahoma/Tahoma-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+//=============================================
+$md1: 1198.98;
+$md2: 991.98;
+$md3: 767.98;
+$md4: 479.98;
+
+$grey: rgba(153, 153, 153, 1);
+$peridot: rgba(147, 234, 32, 1);
+$white: #ffffff;
+//=============================================
+* {
+    font-family: Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 150%;
+    color: #232323;
+}
+
+ 
 [class^="icon-"], [class*=" icon-"] {
     /* use !important to prevent issues with browser extensions that change fonts */
     font-family: 'icomoon' !important;
@@ -44,37 +86,7 @@
     content: "\ea9d";
 }
 
- @font-face {
-	font-family: 'Tahoma';
-	src: url('Tahoma.eot');
-	src: local('Tahoma'),
-		url('../fonts/Tahoma/Tahoma.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Tahoma/Tahoma.woff') format('woff'),
-        url('../fonts/Tahoma/Tahoma.woff2') format('woff2'),
-		url('../fonts/Tahoma/Tahoma.ttf') format('truetype');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'Tahoma';
-	src: url('../fonts/Tahoma/Tahoma-Bold.eot');
-	src: local('../fonts/Tahoma/Tahoma Bold'), local('Tahoma-Bold'),
-		url('../fonts/Tahoma/Tahoma-Bold.eot?#iefix') format('embedded-opentype'),
-		url('../fonts/Tahoma/Tahoma-Bold.woff') format('woff'),
-        url('../fonts/Tahoma/Tahoma-Bold.woff2') format('woff2'),
-		url('../fonts/Tahoma/Tahoma-Bold.ttf') format('truetype');
-	font-weight: bold;
-	font-style: normal;
-}
-
-* {
-    font-family: Tahoma, sans-serif;
-    font-size: 16px;
-    line-height: 150%;
-    color: #232323;
-}
-
+//=============================================
 html,
 body {
 	height: 100%;
@@ -91,6 +103,9 @@ a, button, a *, button * {
     max-width: 1270px;
     overflow: hidden;
     margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .container {
@@ -100,6 +115,199 @@ a, button, a *, button * {
     }
 }
 
+.row {
+    display: flex;
+    justify-content: space-between;
+}
+.column {
+}
+
+//=============================================
+.h1 {
+    color: $white;
+}
+.h2 {
+
+    &_center {
+
+    }
+
+    &_left {
+    }
+}
+.btn {
+
+    // .btn_rounded-corners
+
+    &_rounded-corners {
+    }
+
+    // .btn_watch
+
+    &_video {
+    }
+}
+.peridot {
+    color: $peridot
+}
+//=============================================
+.popup {
+    display: none;
+}
+
+//=============================================
+.main {
+}
+
+//=============================================
+.top {
+        flex: 0 1 100%;
+        &__container {
+            max-width: 1230px;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+        &__column {
+            &:first-child {
+                flex: 1 1 63%;
+            }
+            &:nth-child(2) {
+                flex: 1 1 37%;
+            }
+        }
+
+		// .top__content
+
+		&__content {
+		}
+}
+
+.logo {
+}
+.flag {
+    color: $peridot;
+}
+.date {
+    color: $white;
+}
+.form {
+
+		// .form__body
+
+		&__body {
+		}
+
+		// .form__title
+
+		&__title {
+            color: $white;
+		}
+
+		// .form__item
+
+		&__item {
+		}
+
+		// .form__input
+
+		&__input {
+            color: $grey;
+		}
+
+		// .form__agreement
+
+		&__agreement {
+            color: $white;
+		}
+}
+.checkbox {
+
+		// .checkbox__input
+
+		&__input {
+		}
+
+		// .checkbox__label
+
+		&__label {
+            color: $white;
+		}
+}
+//=============================================
+.partners {
+}
+
+.comment {
+    color: $grey;
+}
+.text {
+}
+.list {
+}
+.gain {
+}
+//=============================================
+.experts {
+}
+.expert {
+    flex: 0 1 20%;
+
+		// .expert__portrait
+
+		&__portrait {
+            border-radius: 30px;
+            overflow: hidden;
+            width: 164px;
+            height: 164px;
+		}
+
+		// .expert__caption
+
+		&__caption {
+		}
+
+		// .expert__name
+
+		&__name {
+		}
+
+		// .expert__position
+
+		&__position {
+            color: $grey;
+		}
+}
+.portrait {
+		// .portrait__img
+
+		&__img {
+            display: block;
+		}
+}
+//=============================================
 .footer {
     padding: 60px 0;
+}
+.policy {
+    color: $grey;
+}
+.iconbox {
+    display: flex;
+    list-style: none;
+}
+.socicon {
+    &__link {
+        color: $grey;
+        font-size: 17px;;
+    }
+}
+.icon-spiceworks {
+}
+.icon-linkedin {
+}
+.icon-facebook {
+}
+.icon-twitter {
+}
+.icon-youtube {
 }

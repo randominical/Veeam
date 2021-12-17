@@ -1,6 +1,6 @@
 function fullscreenBlock() {
-    let width = window.innerWidth;
-    let height = window.innerHeight;
+    let width = document.documentElement.clientWidth;
+    let height = document.documentElement.clientHeight;
     let fullscreen = document.querySelector("#fullscreen");
 
     fullscreen.style.width = width + "px";

@@ -162,10 +162,21 @@ a, button, a *, button * {
 //=============================================
 .top {
     min-height: 350px;
+    background: rgba(0, 69, 80, 1);
+    position: relative;
+        &:before {
+            content: '';
+            width: 42%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: rgba(0, 0, 0, 0.2);
+        }
         &__container {
             max-width: 1230px;
             overflow: hidden;
-
+            margin: 0 auto;
         }
         &__column {
             &:first-child {

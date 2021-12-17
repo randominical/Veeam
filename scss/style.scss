@@ -161,11 +161,11 @@ a, button, a *, button * {
 
 //=============================================
 .top {
-        flex: 0 1 100%;
+    min-height: 350px;
         &__container {
             max-width: 1230px;
             overflow: hidden;
-            margin: 0 auto;
+
         }
         &__column {
             &:first-child {

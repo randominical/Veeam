@@ -104,13 +104,10 @@ a, button, a *, button * {
   display: none; }
 
 .top {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%; }
+  min-height: 350px; }
   .top__container {
     max-width: 1230px;
-    overflow: hidden;
-    margin: 0 auto; }
+    overflow: hidden; }
   .top__column:first-child {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 63%;

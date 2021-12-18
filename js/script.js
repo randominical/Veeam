@@ -1,3 +1,21 @@
+/*
+function topBg() {
+    let bg = document.getElementById('bg');
+    const column = document.getElementById('column');
+
+    const columnPosition = column.getBoundingClientRect();
+    bg.style.left = columnPosition.left + 'px';
+
+    console.log(columnPosition);
+
+}
+
+topBg();
+
+*/
+
+
+
 function videoPlay() {
     let video = document.getElementById('player');
     let playBtn = document.getElementById('play');
@@ -15,9 +33,6 @@ function videoPlay() {
         }
     }
 }
-
-videoPlay();
-
 
 function popup() {
     let body = document.querySelector('body');
@@ -40,12 +55,6 @@ function popup() {
     }
 }
 
+videoPlay();
 popup();
 
-
-/*
-document.addEventListener('click', function(event) {
-  var e = document.getElementById('test');
-  if (!e.contains(event.target)) e.style.display='none';
-});
-*/

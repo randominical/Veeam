@@ -42,6 +42,7 @@ $md1: 1198.98;
 $md2: 991.98;
 $md3: 767.98;
 $md4: 479.98;
+$md5: 379.98;
 
 $grey: rgba(153, 153, 153, 1);
 $peridot: rgba(147, 234, 32, 1);
@@ -52,6 +53,12 @@ $white: #ffffff;
     font-size: 16px;
     color: #232323;
     box-sizing: border-box !important;
+    @media (max-width: $md3 + px) {
+        font-size: 14px;
+    }
+    @media (max-width: $md5 + px) {
+        font-size: 12px;
+    }
 }
 
  
@@ -113,8 +120,8 @@ a, button, a *, button * {
 }
 
 .container {
-    padding: 0 20px;
-    position: relative;
+    padding: 0 20px;/*
+    position: relative;*/
     z-index: 2;
     &_wrp {
         max-width: 1230px;
@@ -126,15 +133,7 @@ a, button, a *, button * {
 .row {
     display: flex;
     justify-content: space-between;
-}
-.column {
-
-    &:first-child {
-        
-    }
-    &:nth-child(2) {
-        
-    }
+    flex-wrap: wrap;
 }
 
 //=============================================
@@ -143,6 +142,9 @@ a, button, a *, button * {
     font-size: 60px;
     line-height: 113%;
     font-weight: normal;
+    @media (max-width: $md3 + px) {
+        font-size: 45px;
+    }
 }
 .h2 {
     font-size: 40px;
@@ -154,6 +156,9 @@ a, button, a *, button * {
     &_left {
         text-align: left;
     }
+    @media (max-width: $md3 + px) {
+        font-size: 30px;
+    }
 }
 .btn {
     border-radius: 99px;
@@ -163,6 +168,7 @@ a, button, a *, button * {
     font-size: 16px;
     text-transform: uppercase;
     padding: 15px 32px;
+    transition: background ease-out 0.3s;
     &_peridot {
         background: $peridot;
         color: #005F4B;
@@ -170,6 +176,15 @@ a, button, a *, button * {
     &_green {
         background: rgba(0, 179, 54, 1);
         color: #ffffff;
+    }
+    @media (hover: hover) {
+        &:hover {
+            background: #005F4B;
+            color: #ffffff;
+        }
+    }
+    @media (max-width: $md3 + px) {
+        font-size: 14px;
     }
 }
 .peridot {
@@ -182,10 +197,16 @@ a, button, a *, button * {
         color: $peridot;
         font-size: 28px;
         text-transform: uppercase;
+        @media (max-width: $md3 + px) {
+            font-size: 20px;
+        }
     }
     &_date {
         color: $white;
         font-size: 28px;
+        @media (max-width: $md3 + px) {
+            font-size: 20px;
+        }
     }
     &_comment {
         color: $grey;
@@ -197,15 +218,31 @@ a, button, a *, button * {
         li {
             margin: 0 0 10px 0;
         }
-
+        @media (max-width: $md3 + px) {
+            padding: 0 0 0 16px;
+            margin: 0 0 16px 0px !important;
+        }
     }
     &_policy {
+        flex: 0 1 70%;
         color: $grey;
+        @media (max-width: $md3 + px) {
+            flex: 0 1 60%;
+        }
+        @media (max-width: $md4 + px) {
+            flex: 0 0 100%;
+        }
     }
     &_gain {
         flex: 0 0 57%;
         font-size: 24px;
         line-height: 133%;
+        @media (max-width: $md2 + px) {
+            flex: 0 0 100%;
+        }
+        @media (max-width: $md3 + px) {
+            font-size: 20px;
+        }
     }
 }
 //=============================================
@@ -222,6 +259,7 @@ a, button, a *, button * {
     background: rgba(49, 49, 49, 0.5);
     &__player {
         width: 80%;
+        max-width: 1200px;
         height: auto;
     }
     &.shown {
@@ -252,9 +290,16 @@ a, button, a *, button * {
 
 		&__content {
 		}
+}/*
+.bg {
+    &__right {
+        position: absolute;
+        height: 100%;
+        width: 20px;
+        background: red;
+    }
 }
-
-
+*/
 .logo {
     width: 229px;
     margin: 0 0 80px 0;
@@ -274,17 +319,30 @@ a, button, a *, button * {
 
 		&__title {
             color: $white;
+            font-size: 28px;
+            line-height: 129%;
+            margin: 0 0 25px 0;
 		}
 
 		// .form__item
 
 		&__item {
+            display: block;
+            margin: 0 0 16px 0;
 		}
 
 		// .form__input
 
 		&__input {
             color: $grey;
+            background: #ffffff;
+            padding: 12px;
+            width: 100%;
+            border: none;
+            outline: none;
+            &:focus {
+                box-shadow: 0 0 15px #7a956b;
+            }
 		}
         &__btn {
             display: block;
@@ -294,19 +352,32 @@ a, button, a *, button * {
 
 		&__agreement {
             color: $white;
+            margin: 0 0 20px 0;
 		}
+        @media (max-width: $md3 + px) {
+            &__title {
+                font-size: 22px;
+            }
+        }
 }
 .checkbox {
-
+    display: flex;
 		// .checkbox__input
 
 		&__input {
+
+
+            &:focus {
+                box-shadow: 0 0 15px #7a956b;
+            }
+            
 		}
 
 		// .checkbox__label
 
 		&__label {
             color: $white;
+
 		}
 }
 //=============================================
@@ -322,6 +393,7 @@ a, button, a *, button * {
     .text {
         margin: 0 0 24px 0;
     }
+
     .column {
         &:first-child {
             flex: 0 0 31.71%;
@@ -329,6 +401,28 @@ a, button, a *, button * {
         &:last-child {
             flex: 0 0 60%;
             padding: 0 4% 0 0;
+        }
+    }
+    @media (max-width: $md2 + px) {
+        .column {
+            &:first-child {
+                flex: 0 0 50%;
+            }
+            &:last-child {
+                flex: 0 0 46%;
+            }
+        }
+    }
+    @media (max-width: $md3 + px) {
+        padding: 50px 0 35px 0;
+        .column {
+            &:first-child {
+                flex: 0 0 100%;
+            }
+            &:last-child {
+                flex: 0 0 100%;
+                padding: 0;
+            }
         }
     }
 }
@@ -373,29 +467,81 @@ a, button, a *, button * {
     &__h2 {
         margin: 0 0 32px 0;
     }
+    @media (max-width: $md3 + px) {
+        padding: 45px 0 45px 0;
+    }
 }
 .expert {
     flex: 0 1 17%;
-    background: url('../img/bg/dots-bg-small.png') 100% 0 / 56% auto no-repeat;
+    position: relative;
     &:not(:last-child) {
         margin: 0 3% 0 0;
     }
-		&__caption {
 
-		}
+    &__bg {
+        position: absolute;
+        width: 56%;
+        height: auto;
+        top: 0;
+        right: 0%;
+        overflow: hidden;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    // .expert__name
 
-		// .expert__name
+    &__name {
+        font-size: 28px;
+        margin: 0 0 15px 0;
+    }
 
-		&__name {
-            font-size: 28px;
-            margin: 0 0 15px 0;
-		}
+    // .expert__position
 
-		// .expert__position
-
-		&__position {
-            color: $grey;
-		}
+    &__position {
+        color: $grey;
+    }
+    @media (hover:hover) {
+        &:hover {
+            .expert__bg {
+                animation: gb-shake 0.2s linear 1;
+            }
+        }
+    }
+    @media (max-width: $md3 + px) {
+        flex: 0 1 33%;
+        &:not(:last-child),
+        &:last-child {
+            margin: 0 7% 10% 7%;
+        }
+        &__name {
+            font-size: 22px;
+            margin: 0 0 10px 0;
+        }
+    }
+    @media (max-width: $md4 + px) {
+        flex: 0 0 100%;
+        display: flex;
+        &__bg {
+            width: 25%;
+            top: auto;
+            bottom: 0;
+            right: auto;
+            left: 0;
+        }
+        &:not(:last-child),
+        &:last-child {
+            margin: 0 0% 10% 0%;
+        }
+        &__name {
+            font-size: 18px;
+            margin: 0 0 5px 0;
+        }
+        &__caption {
+            font-size: 12px;
+        }
+    }
 }
 .portrait {
         padding: 8% 0 0 0;
@@ -416,17 +562,40 @@ a, button, a *, button * {
             left: 50%;
             transform: translate(-50%, -50%);
 		}
+        @media (max-width: $md4 + px) {
+            flex: 0 0 164px;
+            padding: 0 0 0 3%;
+            margin: 0 3% 24px 0;
+            &__cover {
+                width: 100%;
+                padding-bottom: 100%;
+            }
+        }
+        @media (max-width: $md5 + px) {
+            flex: 0 0 120px;
+        }
 }
 //=============================================
 .footer {
     padding: 60px 0;
     background: #E5E5E5;
+    @media (max-width: $md3 + px) {
+        padding: 30px 0;
+    }
 }
 .iconbox {
     flex: 0 0 25%;
     display: flex;
     justify-content: space-around;
     list-style: none;
+    padding-left: 0;
+    @media (max-width: $md3 + px) {
+        flex: 0 0 40%;
+    }
+    @media (max-width: $md4 + px) {
+        flex: 0 0 100%;
+        margin: 20px auto 0 auto;
+    }
 }
 .socicon {
     margin: 0 1px;
@@ -434,18 +603,30 @@ a, button, a *, button * {
         color: $grey;
         font-size: 17px;
         transition: color ease-out 0.3s;
-        &:hover {
-            color: $peridot;
+    }
+    @media (hover:hover) {
+        &__link {
+            &:hover {
+                color: $peridot;
+            }
         }
     }
 }
-.icon-spiceworks {
-}
-.icon-linkedin {
-}
-.icon-facebook {
-}
-.icon-twitter {
-}
-.icon-youtube {
+//=============================================
+@keyframes gb-shake {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(3px, 3px);
+    }
+    50% {
+        transform: translate(-3px, -3px);
+    }
+    75% {
+        transform: translate(3px, 3px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

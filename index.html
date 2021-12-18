@@ -8,7 +8,10 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="js/script.js" defer></script>
 </head>
-<body>
+<body class="body">
+    <div class="popup" id="popup">
+        <video class="popup__player" id="player-popup" src="video/video.mp4" controls></video>
+    </div>
     <div class="top">
         <div class="top__bg bg">
             <div class="bg__right"></div>
@@ -44,8 +47,8 @@
                                     <label for="formAgreement" class="checkbox__label">Yes, I want to receive communications about Veeam products, services and events. I can unsubscribe at any time.</label>
                                 </div>
                             </div>
-                            <p class="form__agreement">By registering you agree to the <span class="peridot">Veeam Privacy Policy</span>.</p>
-                            <button class="btn btn_green">Отправить</button>
+                            <p class="form__agreement text">By registering you agree to the <span class="peridot">Veeam Privacy Policy</span>.</p>
+                            <button class="form__btn btn btn_peridot">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -53,36 +56,34 @@
         </div>
     </div>
     <div class="wrapper">
-        <div class="popup">
-            <div class="container">
-                <video><!--
-                    <source src="https://www.youtube.com/watch?v=yxhTq9s-pbw">-->
-                </video>
-            </div>
-        </div>
         <div class="main">
             <section class="partners">
                 <div class="container">
                     <h2 class="h2 h2_center partners__h2">Our ProPartner Program is designed to help you</h2>
                     <div class="row">
                         <div class="column">
-                            <video poster="img/photos/video.jpg"><!--
-                                <source src="https://www.youtube.com/watch?v=yxhTq9s-pbw">-->
-                            </video>
+                            <div class="video">
+                                <video class="video__player" id="player" src="video/video.mp4" poster="img/photos/video.jpg"></video>
+                                <div class="video__btn" id="play">
+                                    <img src="img/btn.png" alt="play">
+                                </div>
+                            </div>
                             <p class="text text_comment">Veeam Live Recording</p>
                         </div>
                         <div class="column">
-                            <p class="text">Are you challenged by meeting the demands of the Always‑On Enterprise™ and maximizing your organization's investment in the Modern Data Center? If so, join us for a webinar where you'll learn how Veeam® Software and Nutanix’s joint solution can help you achieve:</p>
-                            <ul class="text text_list">
-                                <li>Improve productivity </li>
-                                <li>Create powerful solutions for fast backup and fast restore </li>
-                                <li>Improve efficiency across your business </li>
-                                <li>And more!</li>
-                            </ul>
-                            <p class="text">Learn how organizations like yours can benefit from Cisco and Veeam®.</p>
+                            <div class="partners__content">
+                                <p class="text">Are you challenged by meeting the demands of the Always‑On Enterprise™ and maximizing your organization's investment in the Modern Data Center? If so, join us for a webinar where you'll learn how Veeam® Software and Nutanix’s joint solution can help you achieve:</p>
+                                <ul class="text text_list">
+                                    <li>Improve productivity </li>
+                                    <li>Create powerful solutions for fast backup and fast restore </li>
+                                    <li>Improve efficiency across your business </li>
+                                    <li>And more!</li>
+                                </ul>
+                                <p class="text">Learn how organizations like yours can benefit from Cisco and Veeam®.</p>
+                            </div>
                             <div class="row">
                                 <p class="text text_gain">Gain access to innovative learning tools</p>
-                                <button class="btn btn_peridot">watch now</button>
+                                <div><button class="btn btn_green" id="watch">watch now</button></div>
                             </div>
                         </div>
                     </div>

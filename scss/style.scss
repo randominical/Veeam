@@ -96,6 +96,9 @@ body {
 body {
     display: flex;
     flex-direction: column;
+    &.lock {
+        overflow: hidden;
+    }
 }
 a, button, a *, button * {
 	cursor: pointer;
@@ -127,10 +130,10 @@ a, button, a *, button * {
 .column {
 
     &:first-child {
-        padding: 0 10% 0 0;
+        
     }
     &:nth-child(2) {
-        padding: 0 0 0 10%;
+        
     }
 }
 
@@ -159,9 +162,14 @@ a, button, a *, button * {
     font-weight: 700;
     font-size: 16px;
     text-transform: uppercase;
+    padding: 15px 32px;
     &_peridot {
+        background: $peridot;
+        color: #005F4B;
     }
     &_green {
+        background: rgba(0, 179, 54, 1);
+        color: #ffffff;
     }
 }
 .peridot {
@@ -184,18 +192,42 @@ a, button, a *, button * {
         font-weight: 700;;
     }
     &_list {
+        padding: 0 0 0 24px;
+        margin: 0 0 24px -10px !important;
+        li {
+            margin: 0 0 10px 0;
+        }
 
     }
     &_policy {
         color: $grey;
     }
     &_gain {
-
+        flex: 0 0 57%;
+        font-size: 24px;
+        line-height: 133%;
     }
 }
 //=============================================
 .popup {
-    display: none;
+    opacity: 0;
+    z-index: -1;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(49, 49, 49, 0.5);
+    &__player {
+        width: 80%;
+        height: auto;
+    }
+    &.shown {
+        opacity: 1;
+        z-index: 7777;
+    }
 }
 
 //=============================================
@@ -254,7 +286,10 @@ a, button, a *, button * {
 		&__input {
             color: $grey;
 		}
-
+        &__btn {
+            display: block;
+            width: 100%;
+        }
 		// .form__agreement
 
 		&__agreement {
@@ -281,8 +316,57 @@ a, button, a *, button * {
     &__h2 {
         margin: 0 0 48px 0;
     }
+    &__content {
+        margin: 0 0 48px 0;
+    }
+    .text {
+        margin: 0 0 24px 0;
+    }
+    .column {
+        &:first-child {
+            flex: 0 0 31.71%;
+        }
+        &:last-child {
+            flex: 0 0 60%;
+            padding: 0 4% 0 0;
+        }
+    }
 }
 
+.video {
+    width: 100%;
+    padding-bottom: 56%;
+    margin: 0 0 24px 0;
+    position: relative;
+    overflow: hidden;
+    &__player {
+        position: absolute;
+        width: 100%;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    &__btn {
+        position: absolute;
+        width: 30%;
+        height: auto;
+        max-width: 116px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        transition: opacity ease-out 0.3s;
+        &.hidden {
+            opacity: 0;
+            z-index: -1;
+        }
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+}
 //=============================================
 .experts {
     padding: 64px 0 93px 0;
@@ -292,12 +376,12 @@ a, button, a *, button * {
 }
 .expert {
     flex: 0 1 17%;
-    background: url('../img/bg/dots-bg-small.png') 100% 0 / 119px 151px no-repeat;
+    background: url('../img/bg/dots-bg-small.png') 100% 0 / 56% auto no-repeat;
     &:not(:last-child) {
         margin: 0 3% 0 0;
     }
 		&__caption {
-            font-size: 16px;
+
 		}
 
 		// .expert__name
@@ -314,7 +398,7 @@ a, button, a *, button * {
 		}
 }
 .portrait {
-        padding: 18px 0 0 0;
+        padding: 8% 0 0 0;
         margin: 0 0 24px 0;
 		&__cover {
             border-radius: 30px;

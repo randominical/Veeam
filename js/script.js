@@ -1,3 +1,4 @@
+/*
 function fullscreenBlock() {
     let width = document.documentElement.clientWidth;
     let height = document.documentElement.clientHeight;
@@ -9,3 +10,4 @@ function fullscreenBlock() {
 
 fullscreenBlock();
 window.onresize = fullscreenBlock;
+*/

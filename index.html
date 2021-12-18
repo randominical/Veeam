@@ -9,23 +9,26 @@
     <script src="js/script.js" defer></script>
 </head>
 <body>
-    <div class="top" id="fullscreen">
-        <div class="container top__container">
+    <div class="top">
+        <div class="top__bg bg">
+            <div class="bg__right"></div>
+        </div>
+        <div class="container container_wrp">
             <div class="row">
                 <div class="column top__column">
                     <div class="logo">
                         <img src="img/logo.png" alt="logo">
                     </div>
                     <div class="top__content">
-                        <p class="flag">flag</p>
+                        <p class="text text_flag">flag</p>
                         <h1 class="h1">H1 title with only one or two lines</h1>
-                        <p class="date">Wednesday, Apr. 09</p>
+                        <p class="text text_date">Wednesday, Apr. 09</p>
                     </div>
                 </div>
                 <div class="column top__column">
                     <div class="form">
                         <form action="#" id="form" class="form__body">
-                            <h2 class="form__title">Register to attend</h1>
+                            <h3 class="form__title">Register to attend</h1>
                             <div class="form__item">
                                 <input id="formName" type="text" class="form__input" placeholder="First name*">
                             </div>
@@ -42,7 +45,7 @@
                                 </div>
                             </div>
                             <p class="form__agreement">By registering you agree to the <span class="peridot">Veeam Privacy Policy</span>.</p>
-                            <button class="btn_video btn_rounded-corners">Отправить</button>
+                            <button class="btn btn_green">Отправить</button>
                         </form>
                     </div>
                 </div>
@@ -60,17 +63,17 @@
         <div class="main">
             <section class="partners">
                 <div class="container">
-                    <h2 class="h2_center">Our ProPartner Program is designed to help you</h2>
+                    <h2 class="h2 h2_center partners__h2">Our ProPartner Program is designed to help you</h2>
                     <div class="row">
                         <div class="column">
                             <video poster="img/photos/video.jpg"><!--
                                 <source src="https://www.youtube.com/watch?v=yxhTq9s-pbw">-->
                             </video>
-                            <p class="comment">Veeam Live Recording</p>
+                            <p class="text text_comment">Veeam Live Recording</p>
                         </div>
                         <div class="column">
                             <p class="text">Are you challenged by meeting the demands of the Always‑On Enterprise™ and maximizing your organization's investment in the Modern Data Center? If so, join us for a webinar where you'll learn how Veeam® Software and Nutanix’s joint solution can help you achieve:</p>
-                            <ul class="list">
+                            <ul class="text text_list">
                                 <li>Improve productivity </li>
                                 <li>Create powerful solutions for fast backup and fast restore </li>
                                 <li>Improve efficiency across your business </li>
@@ -78,8 +81,8 @@
                             </ul>
                             <p class="text">Learn how organizations like yours can benefit from Cisco and Veeam®.</p>
                             <div class="row">
-                                <p class="gain">Gain access to innovative learning tools</p>
-                                <button class="btn_video btn_rounded-corners">watch now</button>
+                                <p class="text text_gain">Gain access to innovative learning tools</p>
+                                <button class="btn btn_peridot">watch now</button>
                             </div>
                         </div>
                     </div>
@@ -87,11 +90,13 @@
             </section>
             <section class="experts">
                 <div class="container">
-                    <h2 class="h2_left">Learn from Veeam experts</h2>
+                    <h2 class="h2 h2_left experts__h2">Learn from Veeam experts</h2>
                     <div class="row">
                             <div class="expert">
-                                <div class="expert__portrait">
-                                    <img src="img/photos/spk-1.jpg" alt="Danny Allan" class="portrait__img">
+                                <div class="portrait">
+                                    <div class="portrait__cover">
+                                        <img src="img/photos/spk-1.jpg" alt="Danny Allan" class="portrait__img">
+                                    </div>
                                 </div>
                                 <div class="expert__caption">
                                     <p class="expert__name">Danny Allan</p>
@@ -99,8 +104,10 @@
                                 </div>
                             </div>
                             <div class="expert">
-                                <div class="expert__portrait">
-                                    <img src="img/photos/spk-2.jpg" alt="Olivier Robinne" class="portrait__img">
+                                <div class="portrait">
+                                    <div class="portrait__cover">
+                                        <img src="img/photos/spk-2.jpg" alt="Olivier Robinne" class="portrait__img">
+                                    </div>
                                 </div>
                                 <div class="expert__caption">
                                     <p class="expert__name">Olivier Robinne</p>
@@ -108,8 +115,10 @@
                                 </div>
                             </div>
                             <div class="expert">
-                                <div class="expert__portrait">
-                                    <img src="img/photos/spk-3.jpg" alt="Mike Resseler" class="portrait__img">
+                                <div class="portrait">
+                                    <div class="portrait__cover">
+                                        <img src="img/photos/spk-3.jpg" alt="Mike Resseler" class="portrait__img">
+                                    </div>
                                 </div>
                                 <div class="expert__caption">
                                     <p class="expert__name">Mike Resseler</p>
@@ -117,8 +126,10 @@
                                 </div>
                             </div>
                             <div class="expert">
-                                <div class="expert__portrait">
-                                    <img src="img/photos/spk-4.jpg" alt="Rick Vanover" class="portrait__img">
+                                <div class="portrait">
+                                    <div class="portrait__cover">
+                                        <img src="img/photos/spk-4.jpg" alt="Rick Vanover" class="portrait__img">
+                                    </div>
                                 </div>
                                 <div class="expert__caption">
                                     <p class="expert__name">Rick Vanover</p>
@@ -126,8 +137,10 @@
                                 </div>
                             </div>
                             <div class="expert">
-                                <div class="expert__portrait">
-                                    <img src="img/photos/spk-5.jpg" alt="Michael Cade" class="portrait__img">
+                                <div class="portrait">
+                                    <div class="portrait__cover">
+                                        <img src="img/photos/spk-5.jpg" alt="Michael Cade" class="portrait__img">
+                                    </div>
                                 </div>
                                 <div class="expert__caption">
                                     <p class="expert__name">Michael Cade</p>
@@ -138,30 +151,30 @@
                 </div>
             </section>
         </div>
-        <footer class="footer">
-            <div class="container">
-                <div class="row">
-                    <p class="policy">©2021 Veeam® Software | Privacy Policy & Cookies | EULA | Licensing Policy</p>
-                    <ul class="iconbox">
-                        <li class="socicon">
-                            <a class="socicon__link icon-spiceworks" href="#"></a>
-                        </li>
-                        <li class="socicon">
-                            <a class="socicon__link icon-linkedin" href="#"></a>
-                        </li>
-                        <li class="socicon">
-                            <a class="socicon__link icon-facebook" href="#"></a>
-                        </li>
-                        <li class="socicon">
-                            <a class="socicon__link icon-twitter" href="#"></a>
-                        </li>
-                        <li class="socicon">
-                            <a class="socicon__link icon-youtube" href="#"></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </footer>
     </div>
+    <footer class="footer">
+        <div class="container container_wrp">
+            <div class="row">
+                <p class="text text_policy">©2021 Veeam® Software | Privacy Policy & Cookies | EULA | Licensing Policy</p>
+                <ul class="iconbox">
+                    <li class="socicon">
+                        <a class="socicon__link icon-spiceworks" href="#"></a>
+                    </li>
+                    <li class="socicon">
+                        <a class="socicon__link icon-linkedin" href="#"></a>
+                    </li>
+                    <li class="socicon">
+                        <a class="socicon__link icon-facebook" href="#"></a>
+                    </li>
+                    <li class="socicon">
+                        <a class="socicon__link icon-twitter" href="#"></a>
+                    </li>
+                    <li class="socicon">
+                        <a class="socicon__link icon-youtube" href="#"></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </footer>
 </body>
 </html>

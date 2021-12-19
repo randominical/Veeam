@@ -13,12 +13,24 @@
         <video class="popup__player" id="player-popup" src="video/video.mp4" controls></video>
     </div>
     <div class="top">
-        <div class="top__bg bg">
-            <div class="bg__right" id="bg"></div>
+        <div class="box_bg">
+            <div class="bg bg__dark"></div>
+            <div class="bg bg__left">
+                <img src="img/bg/dots-bg-left.png" alt="">
+            </div>
+            <div class="bg bg__right">
+                <img src="img/bg/dots-bg-right.png" alt="">
+            </div>
+            <div class="bg bg__bottom">
+                <img src="img/bg/dots-bg-left-bottom.png" alt="">
+            </div>
         </div>
         <div class="container container_wrp">
             <div class="row">
                 <div class="column top__column">
+                    <div class="bg bg__img">
+                        <img src="img/bg/computer.png" alt="">
+                    </div>
                     <div class="logo">
                         <img src="img/logo.png" alt="logo">
                     </div>
@@ -31,19 +43,19 @@
                 <div class="column top__column" id="column">
                     <div class="form">
                         <form action="#" id="form" class="form__body">
-                            <h3 class="form__title">Register to attend</h1>
+                            <h3 class="form__title">Register to attend</h3>
                             <div class="form__item">
-                                <input id="formName" type="text" class="form__input" placeholder="First name*">
+                                <input id="formName" type="text" class="form__input" required placeholder="First name*">
                             </div>
                             <div class="form__item">
-                                <input id="formLName" type="text" class="form__input" placeholder="Last name*">
+                                <input id="formLName" type="text" class="form__input" required placeholder="Last name*">
                             </div>
                             <div class="form__item">
-                                <input id="formEmail" type="email" class="form__input _email" placeholder="Business email*">
+                                <input id="formEmail" type="email" class="form__input _email" required placeholder="Business email*">
                             </div>
                             <div class="form__item">
                                 <div class="checkbox">
-                                    <input id="formAgreement" type="checkbox" class="checkbox__input">
+                                    <input id="formAgreement" type="checkbox" class="checkbox__input" required>
                                     <label for="formAgreement" class="checkbox__label">Yes, I want to receive communications about Veeam products, services and events. I can unsubscribe at any time.</label>
                                 </div>
                             </div>
@@ -58,12 +70,13 @@
     <div class="wrapper">
         <div class="main">
             <section class="partners">
-                <div class="container">
+                <div class="container"  id="dot">
                     <h2 class="h2 h2_center partners__h2">Our ProPartner Program is designed to help you</h2>
                     <div class="row">
                         <div class="column">
                             <div class="video">
                                 <video class="video__player" id="player" src="video/video.mp4" poster="img/photos/video.jpg"></video>
+                                <div class="video__dark" id="dark"></div>
                                 <div class="video__btn" id="play">
                                     <img src="img/btn.png" alt="play">
                                 </div>
